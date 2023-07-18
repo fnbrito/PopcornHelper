@@ -25,7 +25,7 @@ namespace PopcornHelper.ViewModels
         }
 
         [RelayCommand]
-        async void Register()
+        async Task Register()
         {
             try
             {

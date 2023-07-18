@@ -5,14 +5,15 @@
              xmlns:vm="clr-namespace:PopcornHelper.ViewModels"
              x:DataType="vm:LoginPageViewModel"
              Title="LoginPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout Margin="20" Spacing="10">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Popcorn Helper"
+            FontSize="Large"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Entry Placeholder="Email" Text="{Binding EmailText}"/>
-        <Entry Placeholder="Password" IsPassword="True" Text="{Binding PasswordText}"/>
-        <HorizontalStackLayout>
+        <Entry Placeholder="Email" HorizontalOptions="Center" MinimumWidthRequest="200" Text="{Binding EmailText}"/>
+        <Entry Placeholder="Password" HorizontalOptions="Center" MinimumWidthRequest="200" IsPassword="True" Text="{Binding PasswordText}"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Button Text="Login" Command="{Binding LoginCommand}"/>
             <Button Text="Register" Command="{Binding RegisterCommand}"/>
         </HorizontalStackLayout>

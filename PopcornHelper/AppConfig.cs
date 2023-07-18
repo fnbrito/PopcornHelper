@@ -8,6 +8,6 @@ namespace PopcornHelper
 {
     public class AppConfig
     {
-        public static string RealmAppId => Environment.GetEnvironmentVariable("REALM_APP_ID");
+        public static string RealmAppId => "";
     }
 }

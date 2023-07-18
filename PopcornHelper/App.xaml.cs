@@ -1,8 +1,14 @@
-﻿namespace PopcornHelper
+﻿
+namespace PopcornHelper
 {
     public partial class App : Application
     {
-        public static Realms.Sync.App RealmApp;
+        private static Realms.Sync.App realmApp;
+        public static Realms.Sync.App RealmApp
+        {
+            get => realmApp;
+            set => realmApp = value;
+        }
 
         public App()
         {
@@ -12,5 +18,6 @@
 
             MainPage = new AppShell();
         }
+
     }
 }
