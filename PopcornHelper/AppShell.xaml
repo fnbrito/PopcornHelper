@@ -3,12 +3,42 @@
     x:Class="PopcornHelper.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:PopcornHelper.Views"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:local="clr-namespace:PopcornHelper.Views">
+    <!--Shell.FlyoutBehavior="Disabled"-->
 
-    <ShellContent
-        Title="Login"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="Login" />
+    <!--<ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
+        <ShellContent Title="Login" ContentTemplate="{DataTemplate local:LoginPage}" Route="Login" />
+    </ShellItem>-->
 
+    <FlyoutItem
+        Title="Home" Route="Home">
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:Home}" Route="Home" />
+    </FlyoutItem>
+
+    <TabBar
+        Title="Orders" Route="OrdersDashboard" FlyoutDisplayOptions="AsSingleItem">
+        <Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate local:Home}"/>
+        </Tab>
+        <Tab Title="Orders">
+            <ShellContent Title="Orders" ContentTemplate="{DataTemplate local:OrdersDashboard}"/>
+            <ShellContent Title="Batches" ContentTemplate="{DataTemplate local:BatchesDashboard}"/>
+        </Tab>
+        
+        <Tab Title="Pop">
+            <ShellContent Title="Overview" ContentTemplate="{DataTemplate local:Home}"/>
+            <ShellContent Title="PowerPop" ContentTemplate="{DataTemplate local:Home}"/>
+        </Tab>
+    </TabBar>
+
+    <FlyoutItem
+        Title="Popping" Route="Home">
+        <ShellContent Title="Popping" ContentTemplate="{DataTemplate local:Home}" Route="Home" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        Title="Config" Route="Home">
+        <ShellContent Title="Config" ContentTemplate="{DataTemplate local:Home}" Route="Home" />
+    </FlyoutItem>
+    
 </Shell>

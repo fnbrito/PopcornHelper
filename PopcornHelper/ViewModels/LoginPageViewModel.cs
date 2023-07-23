@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using PopcornHelper.Views;
 using Realms.Sync;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace PopcornHelper.ViewModels
 
                 if (user is not null)
                 {
-                    await Shell.Current.GoToAsync("///Main");
+                    await Shell.Current.GoToAsync("//Home");
                     EmailText = string.Empty;
                     PasswordText = string.Empty;
                 }
